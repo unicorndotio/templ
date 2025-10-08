@@ -1,8 +1,7 @@
 name: Relatório de bug
 description: Reporte um bug para nos ajudar a melhorar
-labels:
-  - bug
-  - triage
+title: "[BUG] <title>"
+labels: [Bug]
 body:
   - type: markdown
     attributes:
