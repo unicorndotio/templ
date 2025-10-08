@@ -1,41 +1,42 @@
-name: Bug Report
-description: File a bug report.
+---
+name: Relatório de Bug
+description: Registre um relatório de bug.
 title: "[BUG]: "
 labels: ["bug"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        Obrigado por dedicar seu tempo para preencher este relatório de bug!
   - type: textarea
     id: current-behavior
     attributes:
-      label: Current Behavior
-      description: Tell us what happens instead of the expected behavior.
-      value: "A bug happened!"
+      label: Comportamento Atual
+      description: Nos diga o que acontece ao invés do comportamento esperado.
+      value: "Um bug aconteceu!"
     validations:
       required: true
   - type: textarea
     attributes:
-      label: Expected Behavior
-      description: Tell us what should happen.
+      label: Comportamento Esperado
+      description: Nos diga o que deveria acontecer.
     validations:
       required: false
   - type: textarea
     attributes:
-      label: Steps To Reproduce
-      description: Steps to reproduce the behavior.
+      label: Passos Para Reproduzir
+      description: Passos para reproduzir o comportamento.
       placeholder: |
-        1. In this environment...
-        2. With this config...
-        3. Run '...'
-        4. See error...
+        1. Neste ambiente...
+        2. Com esta configuração...
+        3. Execute '...'
+        4. Veja o erro...
     validations:
       required: true
   - type: dropdown
     id: browsers
     attributes:
-      label: What browsers are you seeing the problem on?
+      label: Em quais navegadores você está vendo o problema?
       multiple: true
       options:
         - Firefox
@@ -45,8 +46,8 @@ body:
   - type: textarea
     id: logs
     attributes:
-      label: Relevant log output
+      label: Saída de log relevante
       description:
-        Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for
-        backticks.
+        Por favor, copie e cole qualquer saída de log relevante. Isso será automaticamente formatado em código, então
+        não é necessário usar crases.
       render: shell
