@@ -1,6 +1,6 @@
 # Baseado no template de issue
 name: Solicitação de Funcionalidade
-description: Proponha uma funcionalidade ou ideia para este projeto
+description: Proponha uma funcionalidade ou idéia para este projeto
 title: "[FEAT]: "
 labels: ["feature"]
 body:
@@ -36,11 +36,11 @@ body:
       label: Ambiente
       description: |
         exemplos:
-          - **SO**: Ubuntu 20.04
+          - **OS**: Ubuntu 20.04
           - **Node**: 13.14.0
           - **npm**: 7.6.3
       value: |
-        - SO:
+        - OS:
         - Node:
         - npm:
       render: markdown
