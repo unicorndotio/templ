@@ -1,46 +1,31 @@
-name: Proposta de recurso
-description: Proponha um novo recurso ou ideia para este projeto
-labels:
-  - feature
-  - triage
+# Based on the issue template
+name: Feature request
+description: Suggest an idea for this project
+title: "[FEAT] <title>"
+labels: [enhancement]
 body:
-  - type: markdown
+  - type: checkboxes
     attributes:
-      value: |
-        Obrigado por dedicar seu tempo para propor um recurso!
+      label: Is this a new feature request?
+      description: Please search to see if a feature request already exists.
+      options:
+        - label: I have searched the existing issues
+          required: true
   - type: textarea
-    id: problem-description
     attributes:
-      label: Sua solicitação de recurso está relacionada a um problema? Por favor, descreva.
-      description: 'Uma descrição clara e concisa do problema. Ex: "Sempre fico frustrado quando [...]"'
-      placeholder: Descreva o problema...
-      rows: 5
+      label: Wanted change
+      description: Tell us what you want to happen.
     validations:
       required: true
   - type: textarea
-    id: solution-description
     attributes:
-      label: Descreva a solução que você gostaria
-      description: Uma descrição clara e concisa do que você quer que aconteça.
-      placeholder: Descreva a solução...
-      rows: 5
+      label: Reason for change
+      description: Justify your request, why do you want it, what is the benefit.
     validations:
       required: true
   - type: textarea
-    id: alternatives-considered
     attributes:
-      label: Descreva as alternativas que você considerou
-      description: Uma descrição clara e concisa de quaisquer soluções ou recursos alternativos que você considerou.
-      placeholder: Descreva as alternativas...
-      rows: 3
-    validations:
-      required: false
-  - type: textarea
-    id: additional-context
-    attributes:
-      label: Contexto adicional
-      description: Adicione qualquer outro contexto ou capturas de tela sobre a solicitação de recurso aqui.
-      placeholder: Qualquer outra informação relevante...
-      rows: 3
+      label: Proposed code change
+      description: Do you have a potential code change in mind?
     validations:
       required: false
