@@ -13,8 +13,7 @@ body:
     attributes:
       label: Comportamento Atual
       description: Nos diga o que acontece ao invés do comportamento esperado.
-      placeholder: |
-        Um bug aconteceu!
+      placeholder: Um bug aconteceu!
     validations:
       required: true
   - type: textarea
@@ -22,8 +21,7 @@ body:
     attributes:
       label: Comportamento Esperado
       description: Nos diga o que deveria acontecer.
-      placeholder: |
-        Esperava que...
+      placeholder: Esperava que...
     validations:
       required: false
   - type: textarea
