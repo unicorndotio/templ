@@ -13,7 +13,8 @@ body:
     attributes:
       label: Comportamento Atual
       description: Nos diga o que acontece ao invés do comportamento esperado.
-      value: "Um bug aconteceu!"
+      placeholder: |
+        "Um bug aconteceu!"
     validations:
       required: true
   - type: textarea
