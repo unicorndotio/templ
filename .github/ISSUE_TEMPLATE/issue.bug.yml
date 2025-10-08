@@ -1,115 +1,63 @@
-name: Relatório de bug
-description: Reporte um bug para nos ajudar a melhorar
-title: "[BUG] <title>"
-labels: [Bug]
+name: Bug Report
+description: File a bug report.
+title: "[Bug]: <title>"
+labels: ["bug", "triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        Obrigado por dedicar seu tempo para preencher este relatório de bug!
-  - type: textarea
-    id: bug-description
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: contact
     attributes:
-      label: Descreva o bug
-      description: Uma descrição clara e concisa do que é o bug.
-      placeholder: Descreva brevemente o bug...
-      rows: 5
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
     validations:
       required: true
-  - type: textarea
-    id: reproduce-steps
+  - type: dropdown
+    id: version
     attributes:
-      label: Para Reproduzir
-      description: Passos para reproduzir o comportamento.
-      placeholder: |
-        1. Vá para '...'
-        2. Clique em '....'
-        3. Role para baixo até '....'
-        4. Veja o erro
-      rows: 5
+      label: Version
+      description: What version of our software are you running?
+      options:
+        - 1.0.2 (Default)
+        - 1.0.3 (Edge)
+      default: 0
     validations:
       required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
   - type: textarea
-    id: expected-behavior
+    id: logs
     attributes:
-      label: Comportamento esperado
-      description: Uma descrição clara e concisa do que você esperava que acontecesse.
-      placeholder: Descreva brevemente o que você esperava...
-      rows: 3
-    validations:
-      required: true
-  - type: textarea
-    id: screenshots
+      label: Relevant log output
+      description:
+        Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for
+        backticks.
+      render: shell
+  - type: checkboxes
+    id: terms
     attributes:
-      label: Capturas de tela
-      description: Se aplicável, adicione capturas de tela para ajudar a explicar seu problema.
-      placeholder: Você pode arrastar e soltar imagens aqui.
-      rows: 3
-    validations:
-      required: false
-  - type: input
-    id: desktop-os
-    attributes:
-      label: SO do Desktop
-      description: "ex: macOS, Windows, Linux"
-      placeholder: Seu sistema operacional de desktop
-    validations:
-      required: false
-  - type: input
-    id: desktop-browser
-    attributes:
-      label: Navegador do Desktop
-      description: "ex: Chrome, Firefox, Safari"
-      placeholder: Seu navegador de desktop
-    validations:
-      required: false
-  - type: input
-    id: desktop-version
-    attributes:
-      label: Versão do Navegador do Desktop
-      description: "ex: 100.0.4896.88"
-      placeholder: A versão do seu navegador de desktop
-    validations:
-      required: false
-  - type: input
-    id: smartphone-device
-    attributes:
-      label: Dispositivo Smartphone
-      description: "ex: iPhone 13, Samsung Galaxy S22"
-      placeholder: Seu dispositivo smartphone
-    validations:
-      required: false
-  - type: input
-    id: smartphone-os
-    attributes:
-      label: SO do Smartphone
-      description: "ex: iOS 15, Android 12"
-      placeholder: Seu sistema operacional de smartphone
-    validations:
-      required: false
-  - type: input
-    id: smartphone-browser
-    attributes:
-      label: Navegador do Smartphone
-      description: "ex: Safari, Chrome Mobile"
-      placeholder: Seu navegador de smartphone
-    validations:
-      required: false
-  - type: input
-    id: smartphone-version
-    attributes:
-      label: Versão do Navegador do Smartphone
-      description: "ex: 15.4"
-      placeholder: A versão do seu navegador de smartphone
-    validations:
-      required: false
-  - type: textarea
-    id: additional-context
-    attributes:
-      label: Contexto adicional
-      description: Adicione qualquer outro contexto sobre o problema aqui.
-      placeholder: Qualquer outra informação relevante...
-      rows: 3
-    validations:
-      required: false
-# This is a test comment to trigger GitHub to re-evaluate templates.
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com).
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
