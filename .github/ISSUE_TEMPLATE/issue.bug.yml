@@ -45,6 +45,8 @@ body:
         - Chrome
         - Safari
         - Microsoft Edge
+    validations:
+      required: false
   - type: textarea
     id: logs
     attributes:
@@ -53,3 +55,5 @@ body:
         Por favor, copie e cole qualquer saída de log relevante. Isso será automaticamente formatado em código, então
         não é necessário usar crases.
       render: shell
+    validations:
+      required: false
