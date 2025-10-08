@@ -13,7 +13,9 @@ body:
     attributes:
       label: Comportamento Atual
       description: Nos diga o que acontece ao invés do comportamento esperado.
-      placeholder: Um bug aconteceu!
+      placeholder:
+        Descreva o que está acontecendo atualmente. Por exemplo, "Ao clicar no botão de salvar, a aplicação trava e
+        exibe uma mensagem de erro..."
     validations:
       required: true
   - type: textarea
@@ -21,7 +23,9 @@ body:
     attributes:
       label: Comportamento Esperado
       description: Nos diga o que deveria acontecer.
-      placeholder: Esperava que...
+      placeholder:
+        Descreva o comportamento correto esperado. Por exemplo, "O formulário deveria ser salvo com sucesso e exibir uma
+        mensagem de confirmação..."
     validations:
       required: false
   - type: textarea
@@ -30,10 +34,10 @@ body:
       label: Passos Para Reproduzir
       description: Passos para reproduzir o comportamento.
       placeholder: |
-        1. Neste ambiente...
-        2. Com esta configuração...
-        3. Execute '...'
-        4. Veja o erro...
+        1. Vá para a página '...'
+        2. Clique em '...'
+        3. Role até '...'
+        4. Observe o erro em '...'
     validations:
       required: true
   - type: dropdown
@@ -55,6 +59,7 @@ body:
       description:
         Por favor, copie e cole qualquer saída de log relevante. Isso será automaticamente formatado em código, então
         não é necessário usar crases.
+      placeholder: Cole aqui mensagens de erro do console, stack traces ou logs relevantes...
       render: shell
     validations:
       required: false
