@@ -1,14 +1,13 @@
 blank_issues_enabled: false
-issue_templates:
-  - name: Relatório de bug
-    description: Relate um bug para nos ajudar a melhorar
-    link: issue.bug_report.yml
-  - name: Proposta de recurso
-    description: Proponha um novo recurso ou ideia para este projeto
-    link: issue.feature_request.yml
-  - name: Problema Geral
-    description: Relate um bug, sugira uma melhoria ou faça uma pergunta geral.
-    link: issue.general.yml
-  - name: Pergunta
-    description: Faça uma pergunta que você teve enquanto trabalhava no projeto
-    link: issue.question.yml
+contact_links:
+  - name: Discord chat support
+    url: https://linuxserver.io/discord
+    about: Realtime support / chat with the community and the team.
+
+  - name: Discourse discussion forum
+    url: https://discourse.linuxserver.io
+    about: Post on our community forum.
+
+  - name: Documentation
+    url: https://docs.linuxserver.io/images/docker-plex
+    about: Documentation - information about all of our containers.
