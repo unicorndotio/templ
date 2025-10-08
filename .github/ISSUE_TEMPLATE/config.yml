@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+issue_templates:
+  - name: Relatório de bug
+    description: Relate um bug para nos ajudar a melhorar
+    link: issue.bug_report.yml
+  - name: Proposta de recurso
+    description: Proponha um novo recurso ou ideia para este projeto
+    link: issue.feature_request.yml
+  - name: Problema Geral
+    description: Relate um bug, sugira uma melhoria ou faça uma pergunta geral.
+    link: issue.general.yml
+  - name: Pergunta
+    description: Faça uma pergunta que você teve enquanto trabalhava no projeto
+    link: issue.question.yml

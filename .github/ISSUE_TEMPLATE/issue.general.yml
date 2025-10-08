@@ -1,0 +1,97 @@
+name: Problema Geral
+description: Relate um bug, sugira uma melhoria ou faça uma pergunta geral.
+labels:
+  - enhancement
+  - triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Por favor, forneça o máximo de detalhes possível para o seu problema.
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Comportamento Esperado
+      description: |
+        Se você está descrevendo um bug, diga-nos o que deveria acontecer.
+        Se você está sugerindo uma mudança/melhoria, diga-nos como deveria funcionar.
+      placeholder: Descreva o comportamento esperado...
+      rows: 5
+    validations:
+      required: true
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: Comportamento Atual
+      description: |
+        Se estiver descrevendo um bug, diga-nos o que acontece em vez do comportamento esperado.
+        Se estiver sugerindo uma mudança/melhoria, explique a diferença do comportamento atual.
+      placeholder: Descreva o comportamento atual...
+      rows: 5
+    validations:
+      required: true
+  - type: textarea
+    id: possible-solution
+    attributes:
+      label: Possível Solução
+      description: Não é obrigatório, mas sugira uma correção/razão para o bug, ou ideias de como implementar a adição ou mudança.
+      placeholder: Sugira uma possível solução ou ideias...
+      rows: 3
+    validations:
+      required: false
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Passos para Reproduzir (para bugs)
+      description: |
+        Forneça um link para um exemplo ao vivo, ou um conjunto inequívoco de passos para
+        reproduzir este bug. Inclua código para reproduzir, se relevante.
+      placeholder: |
+        1.
+        2.
+        3.
+        4.
+      rows: 5
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto
+      description:
+        Como este problema te afetou? O que você está tentando realizar? Fornecer contexto nos ajuda a encontrar uma solução que seja mais
+        útil no mundo real.
+      placeholder: Descreva o contexto do problema...
+      rows: 5
+    validations:
+      required: false
+  - type: input
+    id: version-used
+    attributes:
+      label: Versão utilizada
+      placeholder: "ex: v1.0.0"
+    validations:
+      required: false
+  - type: input
+    id: environment
+    attributes:
+      label: Nome e versão do ambiente
+      description: "ex: Chrome 39, node.js 5.4"
+      placeholder: Detalhes do seu ambiente
+    validations:
+      required: false
+  - type: input
+    id: operating-system
+    attributes:
+      label: Sistema operacional e versão
+      description: desktop ou mobile
+      placeholder: Seu sistema operacional
+    validations:
+      required: false
+  - type: input
+    id: project-link
+    attributes:
+      label: Link para o seu projeto
+      placeholder: URL do seu projeto
+    validations:
+      required: false

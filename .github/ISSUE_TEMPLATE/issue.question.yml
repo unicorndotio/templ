@@ -1,0 +1,37 @@
+name: Pergunta
+description: Faça uma pergunta que você teve enquanto trabalhava no projeto
+labels:
+  - question
+  - help wanted
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por fazer uma pergunta!
+  - type: textarea
+    id: what-accomplish
+    attributes:
+      label: O que você está tentando realizar? Por favor, descreva.
+      description: Uma descrição clara e concisa da sua pergunta e o que você está tentando realizar.
+      placeholder: Descreva o que você está tentando fazer...
+      rows: 5
+    validations:
+      required: true
+  - type: textarea
+    id: what-tried
+    attributes:
+      label: O que você tentou até agora?
+      description: Uma descrição clara e concisa do que você já tentou.
+      placeholder: Descreva o que você tentou...
+      rows: 5
+    validations:
+      required: false
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Informações adicionais
+      description: Adicione conteúdo extra aqui (exemplos de código, capturas de tela, etc.)
+      placeholder: Qualquer outra informação relevante...
+      rows: 5
+    validations:
+      required: false
