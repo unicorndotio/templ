@@ -1,76 +1,116 @@
-# Based on the issue template
-name: Bug report
-description: Create a report to help us improve
-title: "[BUG] <title>"
-labels: [Bug]
+name: Relatório de bug
+description: Reporte um bug para nos ajudar a melhorar
+labels:
+  - bug
+  - triage
 body:
-  - type: checkboxes
+  - type: markdown
     attributes:
-      label: Is there an existing issue for this?
-      description: Please search to see if an issue already exists for the bug you encountered.
-      options:
-        - label: I have searched the existing issues
-          required: true
-  - type: textarea
-    attributes:
-      label: Current Behavior
-      description: Tell us what happens instead of the expected behavior.
-    validations:
-      required: true
-  - type: textarea
-    attributes:
-      label: Expected Behavior
-      description: Tell us what should happen.
-    validations:
-      required: false
-  - type: textarea
-    attributes:
-      label: Steps To Reproduce
-      description: Steps to reproduce the behavior.
-      placeholder: |
-        1. In this environment...
-        2. With this config...
-        3. Run '...'
-        4. See error...
-    validations:
-      required: true
-  - type: textarea
-    attributes:
-      label: Environment
-      description: |
-        examples:
-          - **OS**: Ubuntu 20.04
-          - **How docker service was installed**: distro's packagemanager
       value: |
-        - OS:
-        - How docker service was installed:
-      render: markdown
+        Obrigado por dedicar seu tempo para preencher este relatório de bug!
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Descreva o bug
+      description: Uma descrição clara e concisa do que é o bug.
+      placeholder: Descreva brevemente o bug...
+      rows: 5
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce-steps
+    attributes:
+      label: Para Reproduzir
+      description: Passos para reproduzir o comportamento.
+      placeholder: |
+        1. Vá para '...'
+        2. Clique em '....'
+        3. Role para baixo até '....'
+        4. Veja o erro
+      rows: 5
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Comportamento esperado
+      description: Uma descrição clara e concisa do que você esperava que acontecesse.
+      placeholder: Descreva brevemente o que você esperava...
+      rows: 3
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Capturas de tela
+      description: Se aplicável, adicione capturas de tela para ajudar a explicar seu problema.
+      placeholder: Você pode arrastar e soltar imagens aqui.
+      rows: 3
     validations:
       required: false
-  - type: dropdown
+  - type: input
+    id: desktop-os
     attributes:
-      label: CPU architecture
-      options:
-        - x86-64
-        - arm64
+      label: SO do Desktop
+      description: "ex: macOS, Windows, Linux"
+      placeholder: Seu sistema operacional de desktop
     validations:
-      required: true
+      required: false
+  - type: input
+    id: desktop-browser
+    attributes:
+      label: Navegador do Desktop
+      description: "ex: Chrome, Firefox, Safari"
+      placeholder: Seu navegador de desktop
+    validations:
+      required: false
+  - type: input
+    id: desktop-version
+    attributes:
+      label: Versão do Navegador do Desktop
+      description: "ex: 100.0.4896.88"
+      placeholder: A versão do seu navegador de desktop
+    validations:
+      required: false
+  - type: input
+    id: smartphone-device
+    attributes:
+      label: Dispositivo Smartphone
+      description: "ex: iPhone 13, Samsung Galaxy S22"
+      placeholder: Seu dispositivo smartphone
+    validations:
+      required: false
+  - type: input
+    id: smartphone-os
+    attributes:
+      label: SO do Smartphone
+      description: "ex: iOS 15, Android 12"
+      placeholder: Seu sistema operacional de smartphone
+    validations:
+      required: false
+  - type: input
+    id: smartphone-browser
+    attributes:
+      label: Navegador do Smartphone
+      description: "ex: Safari, Chrome Mobile"
+      placeholder: Seu navegador de smartphone
+    validations:
+      required: false
+  - type: input
+    id: smartphone-version
+    attributes:
+      label: Versão do Navegador do Smartphone
+      description: "ex: 15.4"
+      placeholder: A versão do seu navegador de smartphone
+    validations:
+      required: false
   - type: textarea
+    id: additional-context
     attributes:
-      label: Docker creation
-      description: |
-        Command used to create docker container
-        Provide your docker create/run command or compose yaml snippet, or a screenshot of settings if using a gui to create the container
-      render: bash
+      label: Contexto adicional
+      description: Adicione qualquer outro contexto sobre o problema aqui.
+      placeholder: Qualquer outra informação relevante...
+      rows: 3
     validations:
-      required: true
-  - type: textarea
-    attributes:
-      description: |
-        Provide a full docker log, output of "docker logs plex"
-      label: Container logs
-      placeholder: |
-        Output of `docker logs plex`
-      render: bash
-    validations:
-      required: true
+      required: false
+# This is a test comment to trigger GitHub to re-evaluate templates.
